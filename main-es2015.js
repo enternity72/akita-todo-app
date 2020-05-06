@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\" class=\"padding\">\n\n\t<app-todos-container></app-todos-container>\n  <div style=\"margin-top: 100px\"></div>\n  <app-todos-container></app-todos-container>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\" class=\"padding\">\n\n  <app-todos-page></app-todos-page>\n  <div style=\"margin-top: 100px\"></div>\n  <app-todos-page></app-todos-page>\n</div>\n");
 
 /***/ }),
 
@@ -681,40 +681,6 @@ TodoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/todos/todos-page/todos-container.component.ts":
-/*!***************************************************************!*\
-  !*** ./src/app/todos/todos-page/todos-container.component.ts ***!
-  \***************************************************************/
-/*! exports provided: TodosContainerComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TodosContainerComponent", function() { return TodosContainerComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _state_todos_query__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../state/todos.query */ "./src/app/todos/state/todos.query.ts");
-/* harmony import */ var _state_todos_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../state/todos.service */ "./src/app/todos/state/todos.service.ts");
-/* harmony import */ var _state_todos_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../state/todos.store */ "./src/app/todos/state/todos.store.ts");
-
-
-
-
-
-let TodosContainerComponent = class TodosContainerComponent {
-};
-TodosContainerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-todos-container',
-        template: '<app-todos-page></app-todos-page>',
-        providers: [_state_todos_store__WEBPACK_IMPORTED_MODULE_4__["TodosStore"], _state_todos_query__WEBPACK_IMPORTED_MODULE_2__["TodosQuery"], _state_todos_service__WEBPACK_IMPORTED_MODULE_3__["TodosService"]]
-    })
-], TodosContainerComponent);
-
-
-
-/***/ }),
-
 /***/ "./src/app/todos/todos-page/todos-page.component.ts":
 /*!**********************************************************!*\
   !*** ./src/app/todos/todos-page/todos-page.component.ts ***!
@@ -769,7 +735,7 @@ TodosPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-todos-page',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./todos-page.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/todos/todos-page/todos-page.component.html")).default,
-        providers: [_state_todos_store__WEBPACK_IMPORTED_MODULE_5__["TodosStore"]]
+        providers: [_state_todos_store__WEBPACK_IMPORTED_MODULE_5__["TodosStore"], _state_todos_query__WEBPACK_IMPORTED_MODULE_3__["TodosQuery"], _state_todos_service__WEBPACK_IMPORTED_MODULE_4__["TodosService"]]
     })
 ], TodosPageComponent);
 
@@ -845,12 +811,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _state_todos_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./state/todos.store */ "./src/app/todos/state/todos.store.ts");
 /* harmony import */ var _todo_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./todo.component */ "./src/app/todos/todo.component.ts");
-/* harmony import */ var _todos_page_todos_container_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./todos-page/todos-container.component */ "./src/app/todos/todos-page/todos-container.component.ts");
-/* harmony import */ var _todos_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./todos.component */ "./src/app/todos/todos.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _filter_filters_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./filter/filters.component */ "./src/app/todos/filter/filters.component.ts");
-/* harmony import */ var _todos_page_todos_page_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./todos-page/todos-page.component */ "./src/app/todos/todos-page/todos-page.component.ts");
-
+/* harmony import */ var _todos_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./todos.component */ "./src/app/todos/todos.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _filter_filters_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./filter/filters.component */ "./src/app/todos/filter/filters.component.ts");
+/* harmony import */ var _todos_page_todos_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./todos-page/todos-page.component */ "./src/app/todos/todos-page/todos-page.component.ts");
 
 
 
@@ -864,10 +828,10 @@ let TodosModule = class TodosModule {
 };
 TodosModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["ReactiveFormsModule"]],
-        exports: [_todos_component__WEBPACK_IMPORTED_MODULE_6__["TodosComponent"], _filter_filters_component__WEBPACK_IMPORTED_MODULE_8__["TodosFiltersComponent"], _todos_page_todos_page_component__WEBPACK_IMPORTED_MODULE_9__["TodosPageComponent"], _todos_page_todos_container_component__WEBPACK_IMPORTED_MODULE_5__["TodosContainerComponent"]],
-        declarations: [_todo_component__WEBPACK_IMPORTED_MODULE_4__["TodoComponent"], _todos_component__WEBPACK_IMPORTED_MODULE_6__["TodosComponent"], _filter_filters_component__WEBPACK_IMPORTED_MODULE_8__["TodosFiltersComponent"], _todos_page_todos_page_component__WEBPACK_IMPORTED_MODULE_9__["TodosPageComponent"], _todos_page_todos_container_component__WEBPACK_IMPORTED_MODULE_5__["TodosContainerComponent"]],
-        entryComponents: [_todos_page_todos_page_component__WEBPACK_IMPORTED_MODULE_9__["TodosPageComponent"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"]],
+        exports: [_todos_component__WEBPACK_IMPORTED_MODULE_5__["TodosComponent"], _filter_filters_component__WEBPACK_IMPORTED_MODULE_7__["TodosFiltersComponent"], _todos_page_todos_page_component__WEBPACK_IMPORTED_MODULE_8__["TodosPageComponent"]],
+        declarations: [_todo_component__WEBPACK_IMPORTED_MODULE_4__["TodoComponent"], _todos_component__WEBPACK_IMPORTED_MODULE_5__["TodosComponent"], _filter_filters_component__WEBPACK_IMPORTED_MODULE_7__["TodosFiltersComponent"], _todos_page_todos_page_component__WEBPACK_IMPORTED_MODULE_8__["TodosPageComponent"]],
+        entryComponents: [_todos_page_todos_page_component__WEBPACK_IMPORTED_MODULE_8__["TodosPageComponent"]],
         providers: [_state_todos_store__WEBPACK_IMPORTED_MODULE_3__["TodosStore"]]
     })
 ], TodosModule);
