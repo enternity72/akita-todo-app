@@ -10,7 +10,7 @@ import { TodosStore } from "../state/todos.store";
 @Component({
   selector: 'app-todos-page',
   templateUrl: './todos-page.component.html',
-  providers: [TodosStore]
+  providers: [TodosStore, TodosQuery, TodosService]
 })
 export class TodosPageComponent implements OnInit {
   todos$: Observable<Todo[]>;
